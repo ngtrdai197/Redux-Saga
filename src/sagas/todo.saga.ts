@@ -1,4 +1,4 @@
-import { put } from "redux-saga/effects";
+import { put, delay } from "redux-saga/effects";
 
 import { getTodosActionSuccess } from "../store/actions/todo.action";
 const todos = [
@@ -12,5 +12,6 @@ const todos = [
   },
 ];
 export function* getTodos() {
+  yield delay(2000);
   yield put(getTodosActionSuccess({ todos, error: undefined, loading: false }));
 }
