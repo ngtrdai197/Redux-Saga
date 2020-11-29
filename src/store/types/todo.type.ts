@@ -1,5 +1,6 @@
 import { Action } from "redux";
-import { ITodo } from "../../interfaces/todo.interface";
+
+import { ITodo } from "../../shared/interfaces/todo.interface";
 import { ITodoState } from "../reducers/todo.reducer";
 
 export const GET_TODOS = "GET_TODOS";

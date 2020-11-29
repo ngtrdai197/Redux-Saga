@@ -1,9 +1,11 @@
-import { takeLatest } from "redux-saga/effects";
-import { GET_TODOS } from "../store/types/todo.type";
-import { getTodos } from "./todo.saga";
+import { all } from "redux-saga/effects";
+
+import { todoSagas } from "./todo.saga";
+
+const combined = [...todoSagas];
 
 function* mySaga() {
-  yield takeLatest(GET_TODOS, getTodos);
+  yield all(combined);
 }
 
 export default mySaga;

@@ -1,4 +1,4 @@
-import { ITodo } from "../../interfaces/todo.interface";
+import { ITodo } from "../../shared/interfaces/todo.interface";
 import {
   GET_TODOS,
   GET_TODOS_SUCCESS,
